@@ -2,6 +2,8 @@ class VehicleYearParser
   def self.get_vehicle_year(vehicle_text)
     return nil if vehicle_text.blank?
 
+    # Remove dollar signs and commas since that can cause issues
+    vehicle_text = vehicle_text.gsub(/,|\$/,"")
     year=vehicle_text[/\b\d{4}\b|\b\d{2}\b/]
     year=VehicleYearParser.convert_two_digit_year_into_full_year(year.to_s.rjust(2,"0")) if !year.blank? && year.to_s.length < 4
     return year if VehicleYearParser.valid_year?(year)

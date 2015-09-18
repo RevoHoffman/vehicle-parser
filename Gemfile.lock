@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    revo-vehicle-parser (1.1.36)
+    vehicle-parser (1.1.36)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       phone (>= 1.1)
@@ -27,9 +27,9 @@ GEM
     builder (3.2.2)
     diff-lcs (1.2.5)
     erubis (2.7.0)
-    i18n (0.6.9)
+    i18n (0.6.11)
     json (1.8.1)
-    minitest (5.3.3)
+    minitest (5.3.2)
     phone (1.2.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -50,5 +50,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  revo-vehicle-parser!
   rspec (>= 2.0.0)
+  vehicle-parser!

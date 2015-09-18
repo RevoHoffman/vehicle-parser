@@ -142,4 +142,7 @@
 
 * Removed flex fuel as a fuel type, since it's really just a gasoline engine.
 
+## 1.1.37 (9-17-2015)
+
+* Updated year parser
 
