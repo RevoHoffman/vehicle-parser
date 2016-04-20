@@ -11,5 +11,6 @@ class FuelTypeParser
     return "Diesel" if !@description[/dies/i].nil?
     return "Hybrid" if  !@description[/\bhybrid\b/i].nil?
     return "Gasoline" if  !@description[/\bfuel\b/i].nil?
+    return "Gasoline" if !@description[/\bunleaded\b/i].nil?
   end
 end

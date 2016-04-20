@@ -146,3 +146,6 @@
 
 * Updated year parser
 
+## 1.1.38 (4-20-2016)
+
+* Added support for things like "Unleaded Fuel"

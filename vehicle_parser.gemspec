@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'vehicle-parser'
-  s.version     = '1.1.37'
+  s.version     = '1.1.38'
   s.date        = '2012-04-13'
   s.summary     = "Common vehicle parsers"
   s.description = "Provides common vehicle parsers such as transmission, cylinders, drivetrains"
