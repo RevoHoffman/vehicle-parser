@@ -2,7 +2,7 @@ class DriveTrainParser
   
   def initialize(description)
     @description=description
-    @parser=StandardParser.new({:description=>@description,:regex=>get_drive_train_regex,:hash=>get_drive_train_hash})
+    @parser = StandardParser.new({:description=>@description,:regex=>get_drive_train_regex,:hash=>get_drive_train_hash})
   end
 
   def get_drive_train
@@ -10,23 +10,23 @@ class DriveTrainParser
   end
   
   def get_drive_train_from_large_block_of_text
-    dt=@description[get_drive_train_regex]
+    dt = @description[get_drive_train_regex]
     if !dt.nil?
-      dt=dt.gsub(/(wheel drive|drive train|drivetrain)/i,"").strip if !dt.nil?
-      @parser=StandardParser.new({:description=>dt,:regex=>Regexp.new('\bawd|\brwd|\bfwd|\b4wd|\b4x4|\ball wheel drive|\ball-wheel drive|\ball|\bfront wheel drive|\bfront-wheel drive|\bfront|\brear wheel drive|\brear-wheel drive|\brear|\bfour|\b4-wheel drive|\b4-wheel|\b4-|\bfour wheel drive',Regexp::IGNORECASE),:hash=>get_drive_train_hash})
+      dt = dt.gsub(/(wheel drive|drive train|drivetrain)/i,"").strip if !dt.nil?
+      @parser = StandardParser.new({:description=>dt,:regex=>Regexp.new('\bawd|\brwd|\bfwd|\b4wd|\b4x4|\ball wheel drive|\ball-wheel drive|\ball|\bfront wheel drive|\bfront-wheel drive|\bfront|\brear wheel drive|\brear-wheel drive|\brear|\bfour|\b4-wheel drive|\b4-wheel|\b4-|\bfour wheel drive',Regexp::IGNORECASE),:hash=>get_drive_train_hash})
       get_drive_train
     end
   end
   
   
   def cleanse_description
-    description=@parser.cleanse_description
+    description = @parser.cleanse_description
     description.gsub!(/2wd/i,"") if !description.nil?
     description.strip
   end
   
   def get_drive_train_regex
-    Regexp.new('(\bawd\b|\brwd\b|\bfwd\b|\b4wd\b|4x4)|((\brear\b|\bfour\b|\b4\b|\bfront\b|\ball\b) ?-?(wheel drive|drive train|drivetrain))',Regexp::IGNORECASE)
+    Regexp.new('(\bfour|\bawd\b|\brwd\b|\bfwd\b|\b4wd\b|4x4)|((\brear\b|\bfour\b|\b4\b|\bfront\b|\ball\b) ?-?(wheel drive|drive train|drivetrain))',Regexp::IGNORECASE)
   end
   
   def get_drive_train_hash
