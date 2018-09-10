@@ -149,3 +149,8 @@
 ## 1.1.38 (4-20-2016)
 
 * Added support for things like "Unleaded Fuel"
+
+## 1.1.39 (9-10-2018)
+
+* Added support for FourWD drive train parsing"
+
