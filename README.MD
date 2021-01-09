@@ -6,7 +6,7 @@ Gem for handling common parsing problems of vehicles. Things like determining th
 
 Add this to your Gemfile:
 
-`gem 'vehicle-parser', :git => 'git@github.com:Kynlyn/vehicle-parser.git'`
+`gem 'vehicle-parser', github: 'RevoHoffman/vehicle-parser'`
 
 and then run `bundle update`
 
